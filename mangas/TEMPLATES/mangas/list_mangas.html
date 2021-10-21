@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<div class="container">
+    <div class="row">
+        {% for manga in mangas %}
+
+            <div class="card col-3" style="width: 18rem;">
+            <img src={{ manga.cover }} class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ manga.name }}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href={{ manga.link_to_manga }} class="btn btn-primary">Go!</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+{% endblock %}
